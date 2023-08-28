@@ -38,76 +38,38 @@ For this project, we are trained a Resnet20 on CIFAR-10 to recognize in-distribu
 
 
 
-Model Architecture
-In-Distribution/
-Out-of-Distribution
-OOD Detection Method
-AUROC
-FPR@.95TPR
-ResNet-20
-CIFAR-10/MNIST
-Baseline
-0.853
-0.463
-ResNet-20
-CIFAR-10/MNIST
-ODIN (T=1000)
-0.903
-0.438
-ResNet-20
-CIFAR-10/MNIST
-Energy
-0.904
-0.401
-ResNet-20
-CIFAR-5/SVHN
-Baseline with OE
-0.922
-0.329
-ResNet-20
-CIFAR-5/Other5
-Baseline with OE
- 0.772
-0.689
-ResNet-20
-CIFAR-5/MNIST
-Baseline with OE
- 0.997
-0.005
-ResNet-20
-CIFAR-5/Uniform
-Baseline with OE
- 0.965
-0.037
-ResNet-20
-CIFAR-5/Gaussian
-Baseline with OE
-0.971
-0.031
-ResNet-20
-CIFAR-10/MNIST
-ODIN (T=1000)
-0.914
-0.345
-ResNet-10
-CIFAR-10/MNIST
-ODIN (T=1000)
-0.786
-0.530
-ResNet-30
-CIFAR-10/MNIST
-ODIN (T=1000)
-0.921
-0.292
-Wide ResNet-20
-CIFAR-10/MNIST
-ODIN (T=1000)
-0.935
-0.236
-Narrow ResNet-20
-CIFAR-10/MNIST
-ODIN (T=1000)
-0.834
-0.426
+## Out-of-Distribution (OOD) Detection Performance
 
+This table presents the OOD detection performance of various model architectures using different methods. The metrics AUROC (Area Under the Receiver Operating Characteristic curve) and FPR@.95TPR (False Positive Rate at a True Positive Rate of 0.95) are used to evaluate the models.
+
+| Model Architecture     | In-Distribution/Out-of-Distribution | OOD Detection Method      | AUROC | FPR@.95TPR |
+|------------------------|-------------------------------------|---------------------------|-------|------------|
+| ResNet-20              | CIFAR10/MNIST                       | Baseline                  | 0.853 | 0.463      |
+| ResNet-20              | CIFAR10/MNIST                       | ODIN (T=1000)             | 0.903 | 0.438      |
+| ResNet-20              | CIFAR10/MNIST                       | Energy                    | 0.904 | 0.401      |
+| ResNet-20              | CIFAR10/MNIST                       | ODIN (T=1000)             | 0.914 | 0.345      |
+| ResNet-10              | CIFAR10/MNIST                       | ODIN (T=1000)             | 0.786 | 0.530      |
+| ResNet-30              | CIFAR10/MNIST                       | ODIN (T=1000)             | 0.921 | 0.292      |
+| Wide ResNet-20         | CIFAR10/MNIST                       | ODIN (T=1000)             | 0.935 | 0.236      |
+| Narrow ResNet-20       | CIFAR10/MNIST                       | ODIN (T=1000)             | 0.834 | 0.426      |
+| ResNet-20              | CIFAR5/SVHN                         | Baseline with CIFAR1 OE   | 0.589 | 0.866      |
+| ResNet-20              | CIFAR5/SVHN                         | Baseline with CIFAR5 OE   | 0.545 | 0.905      |
+| ResNet-20              | CIFAR5/SVHN                         | Baseline with CIFAR20 OE  | 0.558 | 0.868      |
+| ResNet-20              | CIFAR5/SVHN                         | Baseline with CIFAR50 OE  | 0.745 | 0.728      |
+| ResNet-20              | CIFAR5/SVHN                         | Baseline with CIFAR100 OE | 0.815 | 0.546      |
+| ResNet-20              | CIFAR5/Other5                       | Baseline with CIFAR1 OE   | 0.454 | 0.999      |
+| ResNet-20              | CIFAR5/Other5                       | Baseline with CIFAR5 OE   | 0.428 | 0.998      |
+| ResNet-20              | CIFAR5/Other5                       | Baseline with CIFAR20 OE  | 0.620 | 0.894      |
+| ResNet-20              | CIFAR5/Other5                       | Baseline with CIFAR50 OE  | 0.679 | 0.819      |
+| ResNet-20              | CIFAR5/Other5                       | Baseline with CIFAR100 OE | 0.702 | 0.723      |
+| ResNet-20              | CIFAR10/SVHN                        | Baseline with Robust OE   | 0.922 | 0.329      |
+| ResNet-20              | CIFAR10/Other5                      | Baseline with Robust OE   | 0.772 | 0.689      |
+| ResNet-20              | CIFAR10/MNIST                       | Baseline with Robust OE   | 0.997 | 0.005      |
+| ResNet-20              | CIFAR10/Uniform                      | Baseline with Robust OE   | 0.965 | 0.037      |
+| ResNet-20              | CIFAR10/Gaussian                    | Baseline with Robust OE   | 0.971 | 0.031      |
+| ResNet-20              | CIFAR10/MNIST                       | Energy with Robust OE     | 0.830 | 0.912      |
+| ResNet-20              | CIFAR10/SVHN                        | Energy with Robust OE     | 0.894 | 0.439      |
+| ResNet-20              | CIFAR10/CIFAR100                    | Energy with Robust OE     | 0.781 | 0.847      |
+| ResNet-20              | CIFAR10/Uniform                      | Energy with Robust OE     | 1.0   | 0.0        |
+| ResNet-20              | CIFAR10/Gaussian                    | Energy with Robust OE     | 1.0   | 0.0        |
 
