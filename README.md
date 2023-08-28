@@ -65,11 +65,11 @@ This table presents the OOD detection performance of various model architectures
 | ResNet-20              | CIFAR10/SVHN                        | Baseline with Robust OE   | 0.922 | 0.329      |
 | ResNet-20              | CIFAR10/Other5                      | Baseline with Robust OE   | 0.772 | 0.689      |
 | ResNet-20              | CIFAR10/MNIST                       | Baseline with Robust OE   | 0.997 | 0.005      |
-| ResNet-20              | CIFAR10/Uniform                      | Baseline with Robust OE   | 0.965 | 0.037      |
+| ResNet-20              | CIFAR10/Uniform                     | Baseline with Robust OE   | 0.965 | 0.037      |
 | ResNet-20              | CIFAR10/Gaussian                    | Baseline with Robust OE   | 0.971 | 0.031      |
 | ResNet-20              | CIFAR10/MNIST                       | Energy with Robust OE     | 0.830 | 0.912      |
 | ResNet-20              | CIFAR10/SVHN                        | Energy with Robust OE     | 0.894 | 0.439      |
 | ResNet-20              | CIFAR10/CIFAR100                    | Energy with Robust OE     | 0.781 | 0.847      |
-| ResNet-20              | CIFAR10/Uniform                      | Energy with Robust OE     | 1.0   | 0.0        |
+| ResNet-20              | CIFAR10/Uniform                     | Energy with Robust OE     | 1.0   | 0.0        |
 | ResNet-20              | CIFAR10/Gaussian                    | Energy with Robust OE     | 1.0   | 0.0        |
 
