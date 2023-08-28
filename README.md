@@ -22,10 +22,23 @@ By setting a threshold on the energy levels, one can detect OOD samples.
 This approach involves explicitly training a model with in-distribution data labeled as positive and a diverse set of OOD data labeled as negative.
 During training, the model is exposed to these outliers (OOD data) and learns to distinguish them from in-distribution data.
 
-## Dataset and Network:
+## Dataset and Architectues:
 ### Resnet20 trained on CIFAR-10:
 Resnet20 is a variant of the ResNet (Residual Network) architecture with 20 layers. ResNets are known for their skip connections, which help in training deep networks by allowing gradients to flow through these connections, preventing the vanishing gradient problem.
 CIFAR-10 is a dataset consisting of 60,000 32x32 color images in 10 classes, with 6,000 images per class. This dataset is used for the in-distribution samples in the project.
+
+### Additional Model Architectures Tested:
+In our quest for a more comprehensive understanding of the performance of the mentioned OOD detection methods, we explored multiple ResNet architectures to discern their efficiency. Below is a list of the model architectures we experimented with:
+
+ResNet 10: A smaller variant of the original ResNet, ResNet 10 comes with 10 layers. It's lighter and faster but might compromise on accuracy for complex tasks.
+
+ResNet 30: A larger architecture, ResNet 30 comes with 30 layers. It's expected to capture more intricate patterns in the data, potentially leading to better performance at the cost of computational intensity.
+
+Wide ResNet 20: This variant has more filters in its layers compared to ResNet 20. The increased width can make the network more expressive, allowing it to capture more complex patterns. However, this comes with an increase in the number of parameters and, therefore, computational cost.
+
+Narrow ResNet 20: As the name suggests, this version has fewer filters than the standard ResNet 20. It's a more compact model and faster to train, but it might not perform as well on complex tasks due to its limited expressiveness.
+
+For each architecture, the training regimen on CIFAR-10 remained consistent to ensure a fair comparison. The evaluation on OOD samples helped us gauge how the depth and width of the network influence the efficacy of different OOD detection algorithms.
 
 ### OOD Samples:
 CIFAR-100: Similar to CIFAR-10 but consists of 100 classes with fewer images per class.
