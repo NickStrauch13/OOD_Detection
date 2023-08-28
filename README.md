@@ -2,6 +2,7 @@
 [--->> View Paper <<---](https://drive.google.com/file/d/1gbOGJ_RghqT8PtpEbiBvCCxduZxK5ZMR/view?usp=drive_link)
 
 Out-of-Distribution (OOD) detection refers to the task of identifying whether a given input comes from the data distribution the model was trained on (in-distribution) or from a different distribution (out-of-distribution).
+![image](https://github.com/NickStrauch13/OOD_Detection/assets/61529274/c1ca3355-323b-48df-bd99-6447ab8fc19d)
 
 ## Algorithms for OOD Detection:
 ### Maximum Softmax Probability:
